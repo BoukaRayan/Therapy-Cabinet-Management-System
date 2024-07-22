@@ -5,6 +5,21 @@ The Therapy-Cabinet-Management-System is a comprehensive solution designed to st
 
 ![Screenshot](.githubutils/Screenshot.png)
 
+## Installation
+
+- [Java](https://www.java.com/)
+- [JavaFX](https://openjfx.io/)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/soualahmohammedzakaria/Therapy-Cabinet-Management-System.git
+cd Therapy-Cabinet-Management-System
+```
+
+### Run the Program
+
+Run the program from your IDE or command line.
 
 ## Contributing
 
