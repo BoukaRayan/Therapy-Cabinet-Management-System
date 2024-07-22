@@ -3,7 +3,7 @@ The Therapy-Cabinet-Management-System is a comprehensive solution designed to st
 
 ## Demonstration
 
-![Screenshot](.githubutils/Screenshot.png)
+![Screenshot](.githubutils/screenshot.png)
 
 ## Installation
 
