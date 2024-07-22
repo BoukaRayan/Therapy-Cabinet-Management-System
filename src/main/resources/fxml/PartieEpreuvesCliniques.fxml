@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.PartieEpreuvesCliniquesController">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <TableView fx:id="tableView" prefHeight="400.0" prefWidth="600.0">
+                <columns>
+                    <TableColumn fx:id="columnEnonce" prefWidth="348.1999988555908" text="Enonce/Consigne" />
+                    <TableColumn fx:id="columnPropositions" prefWidth="332.60003662109375" text="Propositions" />
+                    <TableColumn fx:id="columnScore" prefWidth="101.00003051757812" text="Score" />
+                </columns>
+            </TableView>
+            <JFXTextArea fx:id="observationsArea" prefHeight="60.0" prefWidth="600.0" text="Observations (séparées par #)" />
+            <JFXTextArea fx:id="conclusionArea" prefHeight="60.0" prefWidth="600.0" text="Conclusion" />
+            <HBox alignment="CENTER" spacing="10.0">
+                <JFXButton mnemonicParsing="false" onAction="#handleSuivant" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Suivant" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXButton>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

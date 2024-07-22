@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" stylesheets="@../css/DossiersPatients.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.BilansOrthophoniquesController">
+    <children>
+        <BorderPane layoutX="-101.0" layoutY="229.0" prefHeight="786.0" prefWidth="1250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="450" prefWidth="1250.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="premierColumn" prefWidth="185.0" text="Premier" />
+                        <TableColumn fx:id="dateColumn" prefWidth="185.00002133846283" text="Date" />
+                        <TableColumn fx:id="epreuvesColumn" prefWidth="185.60000610351562" text="Nombre d'épreuves" />
+                        <TableColumn fx:id="troublesColumn" prefWidth="184.99996948242188" text="Nombre de troubles" />
+                        <TableColumn fx:id="projetColumn" prefWidth="686.0000610351562" text="Projet Thérapeutique" />
+                    </columns>
+                </TableView>
+            </center>
+            <bottom>
+                <VBox>
+                    <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" prefHeight="40.0" prefWidth="797.0" spacing="10" style="-fx-padding: 0 10;-fx-margin-bottom: 10;" BorderPane.alignment="CENTER">
+                        <Button fx:id="supprimerButton" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Supprimer" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="20.0" />
+                            </font>
+                        </Button>
+                        <BorderPane.margin>
+                            <Insets bottom="30.0" />
+                        </BorderPane.margin>
+                    </HBox>
+                    <padding>
+                        <Insets bottom="20.0" />
+                    </padding>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

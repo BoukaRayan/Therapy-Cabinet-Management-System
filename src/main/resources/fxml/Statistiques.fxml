@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="form2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../css/DossiersPatients.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.StatistiquesController">
+    <BorderPane fx:id="questionsPane" prefHeight="700.0" prefWidth="1200.0">
+        <center>
+            <TableView fx:id="troublesTable" prefHeight="600.0" prefWidth="1534.0">
+                <columns>
+                    <TableColumn fx:id="numeroColumn" prefWidth="150.0" text="Numéro" />
+                    <TableColumn fx:id="nomColumn" prefWidth="875.0" text="Trouble" />
+                    <TableColumn fx:id="pourcentageColumn" prefWidth="180.0" text="Pourcentage" />
+                </columns>
+            </TableView>
+        </center>
+    </BorderPane>
+</AnchorPane>

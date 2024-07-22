@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="form1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" stylesheets="@../css/RendezVous.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.RendezVousPatientController">
+    <children>
+        <BorderPane fx:id="borderPane" prefHeight="8000.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="625.0" prefWidth="1405.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="200.0" text="ID" />
+                        <TableColumn fx:id="dateColumn" prefWidth="300.0" text="Date" />
+                        <TableColumn fx:id="heureColumn" prefWidth="200.0" text="Heure" />
+                        <TableColumn fx:id="typeColumn" prefWidth="300.0" text="Type" />
+                        <TableColumn fx:id="observationColumn" prefWidth="400.0" text="Observation" />
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

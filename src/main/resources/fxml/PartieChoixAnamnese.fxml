@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.PartieChoixAnamneseController">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <VBox alignment="CENTER" spacing="5.0">
+                <Label text="Anamnese" textFill="#2c4771">
+                    <font>
+                        <Font name="Segoe UI" size="48.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="80.0" />
+                    </VBox.margin>
+                </Label>
+                <Label text="Entrez le numéro de l'anamnese">
+                    <font>
+                        <Font name="Segoe UI" size="28.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="numerosArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+                <VBox.margin>
+                    <Insets bottom="70.0" />
+                </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" spacing="10">
+                <JFXButton mnemonicParsing="false" onAction="#handleSuivant" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Suivant" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXButton>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

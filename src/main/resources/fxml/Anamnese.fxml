@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="AnamnesePane" prefHeight="800.0" prefWidth="1534.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.AnamneseController">
+    <center>
+        <TableView fx:id="anamneseTable" prefHeight="600.0" prefWidth="1534.0">
+            <columns>
+                <TableColumn fx:id="numeroColumn" prefWidth="423.19999998807907" text="Numéro" />
+                <TableColumn fx:id="nomColumn" prefWidth="1108.800048828125" text="Nom" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox>
+            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10;" BorderPane.alignment="CENTER">
+                <TextField fx:id="QstIdField" promptText="Numéro de la questions" />
+                <Button fx:id="ajouterQstButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Ajouter question" textFill="WHITE" />
+                <Button fx:id="supprimerQstButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Supprimer question" textFill="WHITE" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10;" BorderPane.alignment="CENTER">
+                <TextField fx:id="nomField" promptText="Nom de l'anamnese" />
+                <Button fx:id="ajouterButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Ajouter" textFill="WHITE" />
+                <Button fx:id="modifierButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Modifier" textFill="WHITE" />
+                <Button fx:id="supprimerButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Supprimer" textFill="WHITE" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

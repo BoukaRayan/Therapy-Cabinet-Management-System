@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" prefHeight="800.0" prefWidth="1534.0" stylesheets="@../css/DossiersPatients.css" fx:controller="Cabinet.controller.ExercicesController">
+    <center>
+        <TableView fx:id="tableView" prefHeight="600.0" prefWidth="1274.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="numeroColumn" text="Numéro" prefWidth="174.0" />
+                <TableColumn fx:id="consigneColumn" text="Consigne" prefWidth="550.0" />
+                <TableColumn fx:id="materielColumn" text="Matériel" prefWidth="550.0" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10;" BorderPane.alignment="CENTER">
+            <TextField fx:id="consigneField" promptText="Consigne" />
+            <TextField fx:id="materielField" promptText="Matériel" />
+            <Button fx:id="ajouterButton" text="Ajouter" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" textFill="WHITE">
+                <font>
+                    <Font name="Segoe UI" size="14.0" />
+                </font>
+            </Button>
+            <Button fx:id="modifierButton" text="Modifier" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" textFill="WHITE">
+                <font>
+                    <Font name="Segoe UI" size="14.0" />
+                </font>
+            </Button>
+            <Button fx:id="supprimerButton" text="Supprimer" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" textFill="WHITE">
+                <font>
+                    <Font name="Segoe UI" size="14.0" />
+                </font>
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>

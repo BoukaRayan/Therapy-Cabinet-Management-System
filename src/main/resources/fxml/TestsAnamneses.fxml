@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<AnchorPane fx:id="form3" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" prefHeight="786.0" prefWidth="784.0" stylesheets="@../css/DossiersPatients.css" fx:controller="Cabinet.controller.TestsAnamnesesController">
+    <children>
+        <BorderPane fx:id="borderPane" layoutX="-101.0" layoutY="229.0" prefHeight="786.0" prefWidth="1250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10" style="-fx-padding: 0 10;-fx-margin-bottom: 10;" BorderPane.alignment="CENTER">
+                    <Button fx:id="exoButton" onAction="#handleExercicesButtonAction" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Exercices" textFill="WHITE">
+                        <font>
+                            <Font name="Segoe UI" size="20.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="qstButton" onAction="#handleQuestionsButtonAction" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Questions" textFill="WHITE">
+                        <font>
+                            <Font name="Segoe UI" size="20.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="qstAnamButton" onAction="#handleQuestionsAnamneseButtonAction" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Questions des anamneses" textFill="WHITE">
+                        <font>
+                            <Font name="Segoe UI" size="20.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="testsExosButton" onAction="#handleTestsExercicesButtonAction" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Tests Exercices" textFill="WHITE">
+                        <font>
+                            <Font name="Segoe UI" size="20.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="testsQstsButton" onAction="#handleTestsQuestionsButtonAction" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Tests Questions" textFill="WHITE">
+                        <font>
+                            <Font name="Segoe UI" size="20.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="AnamnesesButton" onAction="#handleAnamneseButtonAction" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Anamneses" textFill="WHITE">
+                        <font>
+                            <Font name="Segoe UI" size="20.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="TroublesButton" onAction="#handleTroublesButtonAction" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Troubles" textFill="WHITE">
+                        <font>
+                            <Font name="Segoe UI" size="20.0" />
+                        </font>
+                    </Button>
+                    <BorderPane.margin>
+                        <Insets bottom="30.0" />
+                    </BorderPane.margin>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

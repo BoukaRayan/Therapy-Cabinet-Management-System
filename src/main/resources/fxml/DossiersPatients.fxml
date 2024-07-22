@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="form2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="810.0" prefWidth="1440.0" stylesheets="@../css/DossiersPatients.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.DossiersPatientsController">
+    <children>
+        <BorderPane fx:id="borderPane" layoutX="-101.0" layoutY="229.0" prefHeight="786.0" prefWidth="1250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="421.0" prefWidth="1250.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="idColumn" text="Numéro Dossier" />
+                        <TableColumn fx:id="nomColumn" prefWidth="100.0" text="Nom" />
+                        <TableColumn fx:id="prenomColumn" prefWidth="100.0" text="Prénom" />
+                        <TableColumn fx:id="dateNaissanceColumn" prefWidth="100.0" text="Date de Naissance" />
+                        <TableColumn fx:id="lieuNaissanceColumn" prefWidth="100.0" text="Lieu de Naissance" />
+                        <TableColumn fx:id="adresseColumn" prefWidth="100.0" text="Adresse" />
+                        <TableColumn fx:id="telephoneColumn" prefWidth="100.0" text="Téléphone" />
+                        <TableColumn fx:id="classeEtudesColumn" minWidth="4.0" prefWidth="100.0" text="Classe d'Études" />
+                        <TableColumn fx:id="diplomeColumn" prefWidth="100.0" text="Diplôme" />
+                        <TableColumn fx:id="professionColumn" prefWidth="100.0" text="Profession" />
+                    </columns>
+                </TableView>
+            </center>
+            <bottom>
+                <VBox>
+                    <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" prefHeight="40.0" prefWidth="797.0" spacing="10" style="-fx-padding: 0 10;-fx-margin-bottom: 10;" BorderPane.alignment="CENTER">
+                        <Button fx:id="voirFichesButton" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Fiches de suivi" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="voirRdvsButton" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Rendez vous" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="20.0" />
+                            </font>
+                        </Button>
+                        <Button onAction="#voirBos" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Bilans Orthophniques" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="20.0" />
+                            </font>
+                        </Button>
+                        <Button onAction="#ajouterBo" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Ajouter un bilan" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="20.0" />
+                            </font>
+                        </Button>
+                        <BorderPane.margin>
+                            <Insets bottom="30.0" />
+                        </BorderPane.margin>
+                    </HBox>
+                    <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" prefHeight="40.0" prefWidth="797.0" spacing="10" style="-fx-padding: 0 10;-fx-margin-bottom: 10;" BorderPane.alignment="CENTER">
+                        <Button fx:id="ajouterButton" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Ajouter" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="modifierButton" onAction="#modifierPatient" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Modifier" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="supprimerButton" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Supprimer" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI" size="20.0" />
+                            </font>
+                        </Button>
+                        <BorderPane.margin>
+                            <Insets bottom="30.0" />
+                        </BorderPane.margin>
+                    </HBox>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

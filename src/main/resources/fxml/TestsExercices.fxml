@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="testsExosPane" prefHeight="800.0" prefWidth="1534.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.TestsExercicesController">
+    <center>
+        <TableView fx:id="testsExosTable" prefHeight="600.0" prefWidth="1534.0">
+            <columns>
+                <TableColumn fx:id="numeroColumn" prefWidth="125.39999693632126" text="Numéro" />
+                <TableColumn fx:id="nomColumn" prefWidth="1162.6000518798828" text="Nom" />
+                <TableColumn fx:id="capaciteColumn" minWidth="0.0" prefWidth="245.4000244140625" text="Capacité" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox>
+            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10;" BorderPane.alignment="CENTER">
+                <TextField fx:id="exoIdField" promptText="Numéro de l'exercice" />
+                <Button fx:id="ajouterExoButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Ajouter exercice" textFill="WHITE" />
+                <Button fx:id="supprimerExoButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Supprimer exercice" textFill="WHITE" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10;" BorderPane.alignment="CENTER">
+                <TextField fx:id="nomField" promptText="Nom du test" />
+                <TextField fx:id="capaciteField" promptText="Capacité" />
+                <Button fx:id="ajouterButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Ajouter" textFill="WHITE" />
+                <Button fx:id="modifierButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Modifier" textFill="WHITE" />
+                <Button fx:id="supprimerButton" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Supprimer" textFill="WHITE" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

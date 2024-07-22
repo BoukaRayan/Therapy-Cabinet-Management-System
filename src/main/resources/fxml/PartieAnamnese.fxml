@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.PartieAnamneseController">
+    <children>
+        <VBox alignment="CENTER" layoutX="-504.0" prefHeight="580.0" prefWidth="1294.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <TableView fx:id="tableView" prefHeight="400.0" prefWidth="600.0" editable="false">
+                <columns>
+                    <TableColumn fx:id="columnEnonce" prefWidth="700.0" text="Enoncé" />
+                    <TableColumn fx:id="columnCategorie" prefWidth="300.0" text="Catégorie" />
+                </columns>
+            </TableView>
+            <TextArea fx:id="reponseInput" prefHeight="100.0" prefWidth="600.0" promptText="Enter responses separated by #"/>
+            <HBox alignment="CENTER" spacing="10.0">
+                <JFXButton mnemonicParsing="false" onAction="#handleSuivant" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Suivant" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXButton>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,167 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextArea?>
+
+<AnchorPane fx:id="form2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.AjouterRendezVousController">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <!-- Common fields -->
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Date">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="datePicker" />
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Heure">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="timePicker" prefWidth="200.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="08:00" />
+                            <String fx:value="08:30" />
+                            <String fx:value="09:00" />
+                            <String fx:value="09:30" />
+                            <String fx:value="10:00" />
+                            <String fx:value="10:30" />
+                            <String fx:value="11:00" />
+                            <String fx:value="11:30" />
+                            <String fx:value="12:00" />
+                            <String fx:value="12:30" />
+                            <String fx:value="13:00" />
+                            <String fx:value="13:30" />
+                            <String fx:value="14:00" />
+                            <String fx:value="14:30" />
+                            <String fx:value="15:00" />
+                            <String fx:value="15:30" />
+                            <String fx:value="16:00" />
+                            <String fx:value="16:30" />
+                            <String fx:value="17:00" />
+                            <String fx:value="17:30" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Type">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="typeComboBox" prefWidth="200.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Consultation" />
+                            <String fx:value="Suivi" />
+                            <String fx:value="Atelier" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+            <!-- Champs spécifiques à Consultation -->
+            <VBox fx:id="consultationFields" alignment="CENTER_LEFT" spacing="5.0" managed="false" visible="false">
+                <Label text="Nom">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nomField" />
+                <Label text="Prénom">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="prenomField" />
+                <Label text="Âge">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="ageField" />
+            </VBox>
+
+            <!-- Champs spécifiques à Suivi -->
+            <VBox fx:id="suiviFields" alignment="CENTER_LEFT" spacing="5.0" managed="false" visible="false">
+                <Label text="Numéro de Dossier">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="numeroDossierField" />
+                <Label text="Mode">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="modeComboBox">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="En Présentiel" />
+                            <String fx:value="À Distance" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+            <!-- Champs spécifiques à Atelier -->
+            <VBox fx:id="atelierFields" alignment="CENTER_LEFT" spacing="5.0" managed="false" visible="false">
+                <Label text="Numéros des Dossiers des Participants">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="numerosDossiersParticipantsField" />
+                <Label text="Thématique">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="thematiqueField" />
+            </VBox>
+
+            <!-- Champ d'observation caché par défaut -->
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Observation">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="observationField" promptText="Observation" visible="false" managed="false" />
+            </VBox>
+
+            <!-- Boutons de sauvegarde et d'annulation -->
+            <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" spacing="10">
+                <Button mnemonicParsing="false" onAction="#handleSave" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Enregistrer" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Annuler" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Button>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
+
+
+
+
+

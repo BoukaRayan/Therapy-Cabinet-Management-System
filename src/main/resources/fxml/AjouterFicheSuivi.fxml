@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.AjouterFicheSuiviController">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Nom">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="nomArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+            </VBox>
+            <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" spacing="10">
+                <JFXButton mnemonicParsing="false" onAction="#handleSave" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Enregistrer" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton mnemonicParsing="false" onAction="#handleCancel" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Annuler" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </JFXButton>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

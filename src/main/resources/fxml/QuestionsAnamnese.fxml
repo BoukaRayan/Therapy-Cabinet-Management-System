@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.QuestionAnamneseController">
+    <children>
+        <TableView fx:id="questionsTable" prefHeight="400.0" prefWidth="1456.0">
+            <columns>
+                <TableColumn fx:id="NumeroColumn" text="Numero">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="Numero" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="typeColumn" prefWidth="123.0" text="Type">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="type" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="categorieColumn" prefWidth="235.59996032714844" text="Catégorie">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="categorie" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="enonceColumn" prefWidth="1012.0" text="Énoncé">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="enonce" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <children>
+                <Button onAction="#handleAjouterQuestion" text="Ajouter" />
+                <Button onAction="#handleModifierQuestion" text="Modifier" />
+                <Button onAction="#handleSupprimerQuestion" text="Supprimer" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

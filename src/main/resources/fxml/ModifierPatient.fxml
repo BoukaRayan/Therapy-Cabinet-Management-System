@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="form2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cabinet.controller.ModifierPatientController">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <!-- Common fields -->
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Nom">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="nomArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Prénom">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="prenomArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Adresse">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="adresseArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Date de Naissance">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            <DatePicker fx:id="dateNaisArea" />
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Lieu de Naissance">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="lieuNaisArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Numéro de Télephone">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="telephoneArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+            </VBox>
+
+            <VBox alignment="CENTER_LEFT" spacing="5.0">
+                <Label text="Type de Patient">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="typeComboBox" prefWidth="200.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                        </FXCollections>
+                    </items>
+                </JFXComboBox>
+            </VBox>
+
+            <VBox fx:id="enfantFields" alignment="CENTER_LEFT" managed="false" spacing="5.0" visible="false">
+                <Label text="Classe d'études">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="classeEtudesArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+            </VBox>
+
+            <VBox fx:id="adulteFields" alignment="CENTER_LEFT" managed="false" spacing="5.0" visible="false">
+                <Label text="Diplôme">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="diplomeArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+                <Label text="Profession">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextArea fx:id="professionArea" focusColor="#2c4771" prefHeight="35.0" prefWidth="200.0" />
+            </VBox>
+
+            <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" spacing="10">
+                <JFXButton mnemonicParsing="false" onAction="#handleSave" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Enregistrer" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton mnemonicParsing="false" onAction="#handleCancel" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #2c4771; -fx-background-radius: 15px;" text="Annuler" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                </JFXButton>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+}
+
+.table-view .column-header {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18px;
+    -fx-background-color: white;
+    -fx-border-color: #2c4771;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: white;
+}
+
+.table-view .table-cell {
+    -fx-border-color: #2c4771;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #2c4771;
+}
+.column-header {
+     -fx-pref-height: 70px;
+ }
+.table-view .column-header .label {
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+}
